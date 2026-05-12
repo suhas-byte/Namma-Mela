@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Namma Mela</string>
+    <string name="manager_portal">Manager Portal</string>
+    <string name="seat_map">Seat Map</string>
+    <string name="tonights_play">Tonight\'s Play</string>
+    <string name="reserve_seat">Reserve a Seat</string>
+    <string name="fan_wall">Fan Wall</string>
+    <string name="cast_list">Cast List</string>
+    <string name="no_play_tonight">No show scheduled for tonight</string>
+    <string name="seats_available">seats available</string>
+    <string name="confirm_reservation">Confirm Reservation</string>
+    <string name="enter_name">Enter your name</string>
+    <string name="seat_reserved">Seat reserved successfully!</string>
+    <string name="tagline">Drama Company Digital Box-Office</string>
+</resources>
