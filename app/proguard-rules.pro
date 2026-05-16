@@ -1,2 +1,0 @@
--keep class com.nammamela.data.models.** { *; }
--keepclassmembers class com.nammamela.data.models.** { *; }
