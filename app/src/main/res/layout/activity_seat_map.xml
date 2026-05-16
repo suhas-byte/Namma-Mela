@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_dark"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/bg_card"
+            app:titleTextColor="@color/gold" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!-- Stage indicator -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/gold"
+        android:gravity="center"
+        android:text="🎭  S T A G E"
+        android:textColor="@color/bg_dark"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        android:letterSpacing="0.2"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginTop="16dp" />
+
+    <!-- Legend -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="12dp">
+
+        <View
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:background="@color/seat_available" />
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text=" Available  " android:textColor="@color/text_secondary" android:textSize="12sp"/>
+
+        <View android:layout_width="16dp" android:layout_height="16dp"
+            android:background="@color/seat_reserved" />
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text=" Reserved  " android:textColor="@color/text_secondary" android:textSize="12sp"/>
+
+        <View android:layout_width="16dp" android:layout_height="16dp"
+            android:background="@color/seat_frontrow" />
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text=" Front Row" android:textColor="@color/text_secondary" android:textSize="12sp"/>
+    </LinearLayout>
+
+    <!-- Row labels + seat grid -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_seat_map"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="12dp"
+        android:clipToPadding="false" />
+
+    <!-- Selection & confirm -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_card"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/tv_selected_seat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tap a seat to select"
+            android:textColor="@color/text_secondary"
+            android:textSize="14sp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_confirm_booking"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="12dp"
+            android:text="Confirm Reservation"
+            android:textColor="@color/bg_dark"
+            android:textStyle="bold"
+            android:visibility="gone"
+            app:backgroundTint="@color/gold" />
+    </LinearLayout>
+
+</LinearLayout>
